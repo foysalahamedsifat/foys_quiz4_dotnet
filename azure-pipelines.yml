@@ -16,7 +16,7 @@ steps:
     displayName: 'Install .NET 8 SDK'
 
   # Restore NuGet packages
-  - script: dotnet restore LabFourClassLib/LabFourClassLib.sln
+  - script: dotnet restore FoysApp/FoysApp.sln
     displayName: 'Restore NuGet packages'
 
   # Build project
@@ -24,7 +24,7 @@ steps:
     displayName: 'Build project'
 
   # Pack the project
-  - script: dotnet pack --configuration $(buildConfiguration) -o $(Build.ArtifactStagingDirectory) LabFourClassLib/LabFourClassLib.sln
+  - script: dotnet pack --configuration $(buildConfiguration) -o $(Build.ArtifactStagingDirectory) FoysApp/FoysApp.sln
     displayName: 'Pack NuGet package'
 
   # Authenticate to Azure Artifacts feed
