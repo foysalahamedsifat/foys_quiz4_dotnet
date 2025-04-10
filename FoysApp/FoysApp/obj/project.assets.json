@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user\\source\\repos\\FoysApp\\FoysApp\\FoysApp.csproj",
+      "projectUniqueName": "C:\\Sifat\\Drive F\\DevOps\\Quiz_4\\foys_quiz4_dotnet\\FoysApp\\FoysApp\\FoysApp.csproj",
       "projectName": "FoysApp",
-      "projectPath": "C:\\Users\\user\\source\\repos\\FoysApp\\FoysApp\\FoysApp.csproj",
+      "projectPath": "C:\\Sifat\\Drive F\\DevOps\\Quiz_4\\foys_quiz4_dotnet\\FoysApp\\FoysApp\\FoysApp.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\user\\source\\repos\\FoysApp\\FoysApp\\obj\\",
+      "outputPath": "C:\\Sifat\\Drive F\\DevOps\\Quiz_4\\foys_quiz4_dotnet\\FoysApp\\FoysApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

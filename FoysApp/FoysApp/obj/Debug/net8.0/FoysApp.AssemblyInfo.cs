@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FoysApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fa0f184acd544c35908a4c83823bac9d81d44b87")]
 [assembly: System.Reflection.AssemblyProductAttribute("FoysApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FoysApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
