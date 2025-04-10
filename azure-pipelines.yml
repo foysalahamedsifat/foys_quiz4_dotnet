@@ -1,0 +1,41 @@
+trigger:
+  - main  # Trigger on changes to the main branch
+
+pool:
+  name: Default  # Self-hosted agent pool; use 'Azure Pipelines' if using Microsoft-hosted
+
+variables:
+  buildConfiguration: 'Release'  # Can also be 'Debug' for testing
+
+steps:
+  # Use .NET SDK 8.x
+  - task: UseDotNet@2
+    inputs:
+      packageType: 'sdk'
+      version: '8.0.x'
+    displayName: 'Install .NET 8 SDK'
+
+  # Restore NuGet packages
+  - script: dotnet restore LabFourClassLib/LabFourClassLib.sln
+    displayName: 'Restore NuGet packages'
+
+  # Build project
+  - script: dotnet build --configuration $(buildConfiguration) FoysApp/FoysApp.sln
+    displayName: 'Build project'
+
+  # Pack the project
+  - script: dotnet pack --configuration $(buildConfiguration) -o $(Build.ArtifactStagingDirectory) LabFourClassLib/LabFourClassLib.sln
+    displayName: 'Pack NuGet package'
+
+  # Authenticate to Azure Artifacts feed
+  - task: NuGetAuthenticate@1
+    displayName: 'Authenticate with Azure Artifacts feed'
+
+  # Push package to Azure Artifacts feed
+  - task: NuGetCommand@2
+    inputs:
+      command: 'push'
+      packagesToPush: '$(Build.ArtifactStagingDirectory)/*.nupkg'
+      nuGetFeedType: 'internal'
+      publishVstsFeed: 'fsifat'  # Replace with your actual feed ID or name
+    displayName: 'Push NuGet package to Azure Artifacts'
